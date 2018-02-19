@@ -5,6 +5,7 @@
  .bike-details{
  	width: 500px;
  	border:2px solid#999;
+ 	background:rgb(115, 196, 135);
  	
 
 
