@@ -9,9 +9,11 @@ require_once "bike_ctrl.php";
 
 ?>
 
-<a  href = "views/addbike.php"><h3>+addbike</h3></a><br>
+<a class="add" href = "views/addbike.php"><h3>+addbike</h3></a><br>
 
 <hr>
+
+
 
 <?php
 
@@ -33,10 +35,6 @@ require_once "bike_ctrl.php";
  	$bikectrl->editbike($_POST);
 
  } ?>
-
-
-
-
  
 
 	<h2>BIKELIST</h2>
@@ -56,6 +54,22 @@ if(isset($_GET["id"])){
 ?>
 
 </body>
+
+
+
+
+
+
+<!-- link -->
+<style>
+.add{
+	background:red;
+}
+	.add:hover{
+		background:rgb(255, 68, 68);
+	    color:red;
+	}
+</style>
 
 
 
