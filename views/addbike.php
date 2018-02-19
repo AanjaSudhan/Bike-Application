@@ -1,5 +1,4 @@
 
-<link href="../theme.css" rel="stylesheet">
 
 <?php 
 
@@ -18,6 +17,7 @@ if(isset($_GET["editid"])){
 
 
 ?>
+<ul>
 <?php if (isset($_GET["editid"])) {?>
    
     <h1 style="color:#2275f9;">Edit Bike</h1>
@@ -26,12 +26,12 @@ if(isset($_GET["editid"])){
 
   	<h1 style="color:#2275f9;">Add Bike</h1>
 
-
  <?php } ?> 
+</ul>
 
 
 <body>
-
+<ul>
 <form action = "../index.php" method="post" enctype="multipart/form-data">
 
 <?php if(isset($_GET["editid"])) { ?>
@@ -53,7 +53,7 @@ Brake : <br><input type ="text" name="brake" value ="<?php echo $editbike["brake
 FuelCapacity : <br><input type ="text" name="fuelcapacity" value ="<?php echo $editbike["fuelcapacity"];?>"><br>
 Groundclearance : <br><input type ="text" name= "groundclearance" value ="<?php echo $editbike["groundclearance"];?>"><br>
 <br>
-<div class="button">
+
 <?php if (isset($_GET["editid"])){?>
 
 <button  type ="submit" name="editbike" >Save bike</button>
@@ -62,9 +62,40 @@ Groundclearance : <br><input type ="text" name= "groundclearance" value ="<?php 
 <button  type ="submit" name="addbike" >Add bike</button>
 
 <?php } ?>
-</div>
+
 
 </form>
+</ul>
 </body>
+
+
+
+<style>
+
+body{
+	background: rgb(255, 124, 2);
+}
+
+ button  {
+
+	background:black;
+	color:red;
+	border:none;
+	padding:10px;
+	font-weight:bold;
+	border-radius: 10px;
+
+}
+button:hover{
+	background:red;
+	color:black;
+}
+
+</style>
+
+
+
+
+
 
 
